@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bugGET -  Budget Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>bud<span>GET</span></h1>
+            <h2>Welcome to your budget tracking App.</h2>
+        </div>
+
+        <div class="budget-container">
+
+            <div class="budget-header">
+                <div class="balance">
+                    <h3 class="title">Balance</h3>
+                    <p class="value"><small>$</small>0</p>
+                </div>
+
+                <div class="account">
+                    <div class="income">
+                        <h4>Income</h4>
+                        <p><small>$</small>0</p>
+                    </div>
+                    <div class="outcome">
+                        <h4>Outcome</h4>
+                        <p><small>$</small>0</p>
+                    </div> 
+                </div>
+            </div>
+            <div class="budget-dashboard">
+                <h3>Dashboard</h3>
+                <div class="tabs">
+                    <div class="tab-item active">All</div>
+                    <div class="tab-item">Income</div>
+                    <div class="tab-item">Expenses</div>
+                </div>
+                <div id="income" class="hide">
+                    <!-- Income list -->
+                    <ul></ul>
+                    <!-- Input income -->
+                    <div class="input-area">
+                        <input type="text" id="income-desc-input" name="income-desc" placeholder="Description">
+                        <input type="number" id="income-amount-input" name="income-amount" placeholder="$0">
+                        <button id="add-income" class="btn">+</button>
+                    </div>
+                </div>
+                <div id="expense" class="hide">
+                    <!-- Expenses list -->
+                    <ul></ul>
+                    <!-- Input expense -->
+                    <div class="input-area">
+                        <input type="text" id="expense-desc-input" name="expense-desc" placeholder="Description">
+                        <input type="number" id="expense-amount-input" name="expense-amount" placeholder="$0">
+                        <button id="add-expense" class="btn">+</button>
+                    </div>
+                </div>
+                <div id="all"></div>
+            </div>
+        </div> 
+    </div>
+    <script src="budget.js"></script>
+</body>
+</html>
