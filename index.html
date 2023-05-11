@@ -37,13 +37,13 @@
             <div class="budget-dashboard">
                 <h3>Dashboard</h3>
                 <div class="tabs">
-                    <div class="tab-item active">All</div>
-                    <div class="tab-item">Income</div>
-                    <div class="tab-item">Expenses</div>
+                    <div id="tab-all" class="tab-item active">All</div>
+                    <div id="tab-income" class="tab-item">Income</div>
+                    <div id="tab-expenses"  class="tab-item">Expenses</div>
                 </div>
                 <div id="income" class="hide">
                     <!-- Income list -->
-                    <ul></ul>
+                    <ul class="list"></ul>
                     <!-- Input income -->
                     <div class="input-area">
                         <input type="text" id="income-desc-input" name="income-desc" placeholder="Description">
@@ -53,7 +53,7 @@
                 </div>
                 <div id="expense" class="hide">
                     <!-- Expenses list -->
-                    <ul></ul>
+                    <ul class="list"></ul>
                     <!-- Input expense -->
                     <div class="input-area">
                         <input type="text" id="expense-desc-input" name="expense-desc" placeholder="Description">
@@ -61,7 +61,9 @@
                         <button id="add-expense" class="btn">+</button>
                     </div>
                 </div>
-                <div id="all"></div>
+                <div id="all">
+                    <ul class="list"></ul>
+                </div>
             </div>
         </div> 
     </div>
