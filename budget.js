@@ -12,7 +12,7 @@ const allList = document.querySelector("#all .list");
 // Select buttons
 const allBtn = document.querySelector("#tab-all");
 const incomeBtn = document.querySelector("#tab-income");
-const expenseBtn = document.querySelector("#tab-expense");
+const expenseBtn = document.querySelector("#tab-expenses");
 
 //  Select inputs
 
@@ -52,5 +52,21 @@ allBtn.addEventListener('click', () => {
 
 // Functions
 function show(element){
-    
+    element.classList.remove('hide');
+}
+
+function hide(elements){
+    elements.forEach(element => {
+        element.classList.add('hide');
+    });
+}
+
+function active(element){
+    element.classList.add('active');
+}
+
+function inactive(elements){
+    elements.forEach(element => {
+        element.classList.remove('active');
+    });
 }
