@@ -109,9 +109,18 @@ function editEntry(entry){
     if(ENTRY.type == 'income'){
         incomeAmount.value = ENTRY.amount;
         incomeTitle.value = ENTRY.title;
+        show(incomeEl);
+        hide([expenseEl,allEl]);
+        active(incomeBtn);
+        inactive([expenseBtn,allBtn]);
+
     }else  if(ENTRY.type == 'expense'){
         expenseAmount.value = ENTRY.amount;
         expenseTitle.value = ENTRY.title;
+        show(expenseEl);
+        hide([incomeEl,allEl]);
+        active(expenseBtn);
+        inactive([incomeBtn,allBtn]);
     }
     deleteEntry(entry);
 }
@@ -149,8 +158,8 @@ function showEntry(list, type, title, amount, id){
         <li id="${id}" class="${type}">
             <span class="entry-title">${title}</span>
             <span class="entry-amount">$${amount}</span>
-            <button id="edit" class="entry-edit-btn"><i class="fa-regular fa-pen-to-square"></i></button>
-            <button id="delete" class="entry-delete-btn"><i class="fa-regular fa-trash-can"></i></button>
+            <i id="edit" class="fa-regular fa-pen-to-square entry-edit-btn"></i>
+            <i id="delete" class="fa-regular fa-trash-can entry-delete-btn"></i>
         </li>
     `;
     const position = 'afterbegin';

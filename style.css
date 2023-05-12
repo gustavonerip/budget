@@ -6,6 +6,7 @@
     --primary-color: #F3F7FA;
     --secondary-color: #fff;
     --accent-color: #56C696;
+    --accent-color-hover: #5EC295;
     --error-color: #F64C4F;
     --success-color: #5ABC93;
     --text-color: #2D3E48;
@@ -41,6 +42,14 @@ body {
     font-weight: 300;
     margin: 0;
     padding: 0;
+}
+
+*::selection{
+    background: var(--accent-color);
+}
+
+*::-moz-selection{
+    background: var(--accent-color);
 }
 
 /* Container */
@@ -183,6 +192,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--text-color);
 }
 
 .list li .description {
@@ -197,13 +207,14 @@ body {
 
 .list li span:first-child{
     max-width: 47%;
+    text-transform:capitalize;
 }
 
 .list li span:nth-child(2){
     max-width: 42%;
 }
 
-.list li button{
+.list li i{
     flex-shrink: 1;
     padding: 10px;
     cursor: pointer;
@@ -217,21 +228,61 @@ body {
     color: var(--highlight-text-color);
 }
 
-.list li .amount {
-    font-weight: bold;
-    color: #2196F3;
-}
-
 .input-area {
     display: flex;
-    margin-top: 10px;
+    margin: 24px 0;
+    align-items: center;
+    gap: 16px;
 }
 
-.input-area input[type="text"],
-.input-area input[type="number"] {
-    flex: 1
+.input-area input{
+    padding: 16px;
+    color: var(--text-color);
+    font-size: 16px;
+    font: var(--font-family);
+    box-shadow: none;
+    border: none;
+    border-radius: 16px;
+    transition: all .3s ease-in-out;
+    background: var(--bg-color);
 }
 
+.input-area input:focus{
+    box-shadow: var(--drop-shadow);
+    outline: none;
+    background: var(--container-bg-color);
+}
+
+.input-area input::placeholder{
+    color: var(--highlight-text-color);
+}
+
+.input-area input[type="text"]{
+    flex: 1;
+}
+.input-area input[type="number"]{
+    flex: 0.5;
+}
+.input-area i{
+    flex-grow: .1;
+    text-align: center;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:16px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 24px;
+}
+.input-area i{
+    color: var(--secondary-color);
+}
+.input-area i:hover{
+    background: var(--accent-color-hover);
+}
 /* 
 DON'T EVER DELETE THESE LINES
 
