@@ -149,8 +149,8 @@ function showEntry(list, type, title, amount, id){
         <li id="${id}" class="${type}">
             <span class="entry-title">${title}</span>
             <span class="entry-amount">$${amount}</span>
-            <button id="edit" class="entry-edit-btn">Edit</button>
-            <button id="delete" class="entry-delete-btn">Delete</button>
+            <button id="edit" class="entry-edit-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+            <button id="delete" class="entry-delete-btn"><i class="fa-regular fa-trash-can"></i></button>
         </li>
     `;
     const position = 'afterbegin';
