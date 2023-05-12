@@ -30,6 +30,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 0.6s ease;
 }
 
 html{
@@ -283,6 +284,18 @@ body {
 .input-area i:hover{
     background: var(--accent-color-hover);
 }
+
+.empty-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+}
+.empty-container img{
+    margin: 0 auto;
+}
 /* 
 DON'T EVER DELETE THESE LINES
 
@@ -293,7 +306,9 @@ DANGER ZONE!!!!!!!
 }
 .active{
     font-weight: bold;
-    color: red;
+}
+.error{
+    color: var(--error-color);
 }
 /* 
 END OF DANGER ZONE!!!!!!!

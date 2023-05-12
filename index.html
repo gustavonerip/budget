@@ -46,8 +46,12 @@
                     <div id="tab-expenses"  class="tab-item">Expenses</div>
                 </div>
                 <div id="income" class="hide">
+                    <div id="income-empty"class="empty-container hide">
                     <!-- Income list -->
-                    <ul class="list">No Income yet</ul>
+                    <img src="images/Personal-finance.svg" width="50%" alt="No Income registered yet">
+                        <p>No income registered yet</p>
+                    </div>
+                    <ul class="list"></ul>
                     <!-- Input income -->
                     <div class="input-area">
                         <input type="text" id="income-desc-input" name="income-desc" placeholder="Description">
@@ -56,6 +60,10 @@
                     </div>
                 </div>
                 <div id="expense" class="hide">
+                    <div id="expense-empty" class="empty-container hide">
+                        <img src="images/Financial-Management.svg" width="50%" alt="No Expenses registered yet">
+                            <p>No expenses registered yet</p>
+                        </div>
                     <!-- Expenses list -->
                     <ul class="list"></ul>
                     <!-- Input expense -->
@@ -66,6 +74,11 @@
                     </div>
                 </div>
                 <div id="all">
+                    <div id="all-empty"class="empty-container hide">
+                        <!-- Income list -->
+                        <img src="images/Wallet.svg" width="50%" alt="Nothing registered yet">
+                            <p>Nothing registered yet</p>
+                        </div>
                     <ul class="list"></ul>
                 </div>
             </div>

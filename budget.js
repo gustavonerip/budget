@@ -8,6 +8,9 @@ const allEl = document.querySelector("#all");
 const incomeList = document.querySelector("#income .list");
 const expenseList = document.querySelector("#expense .list");
 const allList = document.querySelector("#all .list");
+const incomeEmpty = document.querySelector('#income-empty');
+const expenseEmpty = document.querySelector('#expense-empty');
+const allEmpty = document.querySelector('#all-empty');
 
 // Select buttons
 const allBtn = document.querySelector("#tab-all");
